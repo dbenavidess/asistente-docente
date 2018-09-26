@@ -39,6 +39,15 @@ class Estudiante (Model):
 	
 	class Meta:
 		database = db
+		
+class lista_gpos (Model):
+	id_lgpos = PrimaryKeyField()
+	id_estudiante = ForeignKeyField(Estudiante,backref ="estudiante")
+	id_Grupo = ForeignKeyField(Grupo,backref ="grupo")
+	
+	class Meta:
+		database = db
+	
 	
 #Inicializar la base de datos
 def initialize_db():
