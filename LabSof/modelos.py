@@ -4,9 +4,6 @@ import datetime
 db = SqliteDatabase('semestres.db') #Base de datos
 
 class Semestre(Model):
-	'''
-	Si no hay llave primaria, peewee lo hará automáticamente
-	'''
 	#Campos que voy a usar
 	id_semestre = PrimaryKeyField()
 	fecha_inicio = DateTimeField(default = datetime.datetime.now)
